@@ -9,6 +9,7 @@ import re
 
 
 _whitespace_re = re.compile(r"\s+")
+_bad_word_re = re.compile(".*[.].*|^$|\W+")
 
 
 def test_strings(contents):
@@ -29,6 +30,8 @@ def cleanup_output(output):
     new_output = [(clean_string(w), e.encode('utf-8')) for w, e in output if w != '\n']
     entities = {}
     for word, entity in new_output:
+        if _bad_word_re.match(word):
+            continue
         if entity not in entities:
             entities[entity] = defaultdict(int)
         entities[entity][word] += 1
@@ -36,6 +39,7 @@ def cleanup_output(output):
     for entity, words in entities.items():
         output[entity] = map(list,sorted(words.items(), key=operator.itemgetter(1), reverse=True))
     return output
+
 
 def plot_results(entities):
     import matplotlib.pyplot as plt
@@ -67,6 +71,19 @@ def plot_results(entities):
     plt.xticks(range(n_entities))
     plt.show()
 
+
+def prepare_csv(entities):
+    output = ["id,value"]
+    root = "entity"
+    output.append(root + ",")
+    for entity, words in entities.items():
+        entity = "{}.{}".format(root, entity)
+        output.append(entity + ",")
+        for word, score in words:
+            output.append("{}.{},{}".format(entity, word, score))
+    return "\n".join(output)
+
+
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser()
@@ -74,6 +91,7 @@ if __name__ == "__main__":
     parser.add_argument("-f", "--filename")
     parser.add_argument("-p", "--plot", action="store_true", default=False)
     parser.add_argument("-c", "--cleanup", action="store_true", default=False)
+    parser.add_argument("--csv", action="store_true", default=False)
     #parser.add_argument("-m", "--model", default="3", choices=("3", "4", "7", "combi"))
     args = parser.parse_args()
     if not args.strings and not args.filename:
@@ -84,11 +102,14 @@ if __name__ == "__main__":
     else:
         output = test_strings(args.strings.split())
 
-    if args.cleanup or args.plot:
+    if args.cleanup or args.plot or args.csv:
         output = cleanup_output(output)
 
     if args.plot:
         plot_results(output)
 
-    print(yaml.dump(output))
+    if args.csv:
+        print(prepare_csv(output))
+    else:
+        print(yaml.dump(output))
     #print(output)

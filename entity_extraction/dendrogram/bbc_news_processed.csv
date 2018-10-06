@@ -1,0 +1,190 @@
+id,value
+entity,
+entity.LOC,
+entity.LOC.Africa,2
+entity.LOC.Latin America,1
+entity.LOC.Middle East,1
+entity.LOC.Asia,1
+entity.LOC.Pinterest,1
+entity.PRODUCT,
+entity.PRODUCT.Kavanaugh,1
+entity.PRODUCT.Grammy,1
+entity.NORP,
+entity.NORP.Republican,5
+entity.NORP.Republicans,5
+entity.NORP.Democrat,3
+entity.NORP.Europe,1
+entity.NORP.Chinese,1
+entity.NORP.Democratic,1
+entity.GPE,
+entity.GPE.UK,3
+entity.GPE.America,3
+entity.GPE.Twitter,2
+entity.GPE.Kavanaugh,2
+entity.GPE.West Virginia,2
+entity.GPE.Washington DC,2
+entity.GPE.Maine,2
+entity.GPE.Arizona,1
+entity.GPE.Chicago,1
+entity.GPE.Australia,1
+entity.GPE.Stillbirth,1
+entity.GPE.Alaska,1
+entity.GPE.US,1
+entity.GPE.Montana,1
+entity.PERCENT,
+entity.PERCENT.100%,1
+entity.PERSON,
+entity.PERSON.Kavanaugh,10
+entity.PERSON.Brett Kavanaugh,7
+entity.PERSON.Messenger,6
+entity.PERSON.Arts,2
+entity.PERSON.Email,2
+entity.PERSON.Newsbeat,2
+entity.PERSON.Food,2
+entity.PERSON.Donald Trump,2
+entity.PERSON.Earth *,2
+entity.PERSON.Joe Manchin,2
+entity.PERSON.Susan Collins,2
+entity.PERSON.Trump,2
+entity.PERSON.Twitter,2
+entity.PERSON.McConnell,2
+entity.PERSON.Taster,2
+entity.PERSON.Music,2
+entity.PERSON.Parental Guidance,1
+entity.PERSON.Lisa Murkowski,1
+entity.PERSON.Use,1
+entity.PERSON.LinkedIn,1
+entity.PERSON.Media captionFeinstein,1
+entity.PERSON.Twitter *,1
+entity.PERSON.Getty Images Image,1
+entity.PERSON.Dad,1
+entity.PERSON.Christine Blasey,1
+entity.PERSON.Anthony Zurcher,1
+entity.PERSON.Feinstein,1
+entity.PERSON.Notifications,1
+entity.PERSON.Explore,1
+entity.PERSON.Steve Daines,1
+entity.PERSON.Christine Blasey Ford,1
+entity.PERSON.Deborah Ramirez,1
+entity.PERSON.Jeff Flake,1
+entity.PERSON.Amy Schumer,1
+entity.PERSON.Pinterest,1
+entity.PERSON.Cookies,1
+entity.PERSON.Copyright,1
+entity.PERSON.Tech,1
+entity.PERSON.Kanye,1
+entity.PERSON.Lisa,1
+entity.PERSON.caption'Ford,1
+entity.PERSON.Manchin,1
+entity.PERSON.Blasey Ford,1
+entity.PERSON.Jeff,1
+entity.PERSON.Share,1
+entity.PERSON.Skip Twitter,1
+entity.PERSON.LinkedIn Copy,1
+entity.PERSON.Brett Kavanaugh's,1
+entity.CARDINAL,
+entity.CARDINAL.5,6
+entity.CARDINAL.300,2
+entity.CARDINAL.two,2
+entity.CARDINAL.4,2
+entity.CARDINAL.one,1
+entity.CARDINAL.four,1
+entity.CARDINAL.27,1
+entity.CARDINAL.18,1
+entity.CARDINAL.51,1
+entity.CARDINAL.Hundreds,1
+entity.CARDINAL.five,1
+entity.CARDINAL.nine,1
+entity.CARDINAL.Ms,1
+entity.CARDINAL.24,1
+entity.CARDINAL.dozens,1
+entity.CARDINAL.51-49,1
+entity.TIME,
+entity.TIME.Friday morning,1
+entity.DATE,
+entity.DATE.October 2018,8
+entity.DATE.Friday,6
+entity.DATE.Saturday,6
+entity.DATE.September 2018,3
+entity.DATE.Thursday,2
+entity.DATE.Tomorrow,2
+entity.DATE.the Week:,1
+entity.DATE.tomorrow,1
+entity.DATE.October 5, 2018 Report,1
+entity.DATE.last week,1
+entity.DATE.2018,1
+entity.DATE.this year,1
+entity.DATE.1982,1
+entity.DATE.later on Friday,1
+entity.DATE.2016,1
+entity.FAC,
+entity.FAC.Email,1
+entity.FAC.Capitol,1
+entity.EVENT,
+entity.EVENT.report,1
+entity.EVENT.World,1
+entity.ORG,
+entity.ORG.FBI,9
+entity.ORG.BBC,8
+entity.ORG.Media,6
+entity.ORG.BBC News,5
+entity.ORG.WhatsApp,4
+entity.ORG.Supreme Court,3
+entity.ORG.Ford,3
+entity.ORG.Facebook,3
+entity.ORG.US & Canada,3
+entity.ORG.World News TV,2
+entity.ORG.CBeebies *,2
+entity.ORG.Reality Check,2
+entity.ORG.Health,2
+entity.ORG.Digital,2
+entity.ORG.The Reporters,2
+entity.ORG.Business,2
+entity.ORG.Entertainment & Arts *,2
+entity.ORG.US Supreme Court,2
+entity.ORG.CBBC *,2
+entity.ORG.Science,2
+entity.ORG.Flake,2
+entity.ORG.Special Reports,2
+entity.ORG.Bitesize,2
+entity.ORG.In Pictures,2
+entity.ORG.Brett Kavanaugh,2
+entity.ORG.Senate,2
+entity.ORG.Lyrics,2
+entity.ORG.Radio,2
+entity.ORG.iPlayer,2
+entity.ORG.the Senate Judiciary Committee,1
+entity.ORG.United States *,1
+entity.ORG.Interpol,1
+entity.ORG.Federal,1
+entity.ORG.Navigation Sections,1
+entity.ORG.LinkedIn,1
+entity.ORG.Reuters,1
+entity.ORG.Kavanaugh,1
+entity.ORG.Business Home *,1
+entity.ORG.Yale University,1
+entity.ORG.Scotland * Wales * Politics,1
+entity.ORG.the Supreme Court,1
+entity.ORG.Trump's,1
+entity.ORG.The US Senate,1
+entity.ORG.Republican Party,1
+entity.ORG.World,1
+entity.ORG.a Wall Street Journal,1
+entity.ORG.Christine Blasey Ford's,1
+entity.ORG.Home * England,1
+entity.ORG.the Senate,1
+entity.ORG.Market Data * Global Trade,1
+entity.ORG.BBC News Services,1
+entity.ORG.Trump's ',1
+entity.ORG.Ramirez,1
+entity.ORG.GB&pal_webapp,1
+entity.ORG.Menu Search Search,1
+entity.ORG.Features,1
+entity.ORG.Democratic Party,1
+entity.ORG.Capitol Hill,1
+entity.ORG.Share,1
+entity.ORG.Accessibility Help,1
+entity.ORG.Privacy Policy,1
+entity.ORG.BBCSearch,1
+entity.ORG.World Home,1
+entity.ORG.Navigation US & Canada,1
