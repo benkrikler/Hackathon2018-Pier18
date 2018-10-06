@@ -80,6 +80,7 @@ def prepare_csv(entities):
         entity = "{}.{}".format(root, entity)
         output.append(entity + ",")
         for word, score in words:
+            word = word.replace(",", r"&#x2c;")
             output.append("{}.{},{}".format(entity, word, score))
     return "\n".join(output)
 

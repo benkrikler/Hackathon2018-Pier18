@@ -65,13 +65,17 @@ d3.csv("bbc_news_processed.csv", function(error, data) {
       .attr("class", function(d) { return "node" + (d.children ? " node--internal" : " node--leaf"); })
       .attr("transform", function(d) { return "translate(" + project(d.x, d.y) + ")"; });
 
-  var scale = 10;
   node.append("circle")
       .style("fill", "red")
+      .style("opacity", 0.3)
       .attr("r", function(d) { 
-            if (d.data.value){ return d.data.value / scale; }
-		  console.log(d);
-		  return d.children.reduce(function(a, x){console.log(a); return a + parseInt(x.data.value);}, 0) / scale;
+		  var value = 0;
+          if (d.data.value){ value = d.data.value; }
+		  if (d.children){
+			  value = d.children.reduce(function(a, x){console.log(a); return a + parseInt(x.data.value);}, 0);
+			  console.log(d.id + value);
+		  }
+		  return value / 0.5;
      });
 
   node.append("text")
