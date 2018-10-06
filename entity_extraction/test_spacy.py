@@ -49,8 +49,8 @@ def plot_results(entities):
         labels.append(entity)
         y = 0
         for word, score in words:
-            # if score < 2:
-            #     continue
+            if score < 2:
+                continue
             try:
                 data.append((x, y, score, word.encode("utf-8","replace")))
             except UnicodeDecodeError:
@@ -60,7 +60,7 @@ def plot_results(entities):
 
     data = pd.DataFrame(data, columns="x y score label".split())
     ax = plt.subplot(111)
-    data.x += np.random.normal(0, 1, len(data))
+#    data.x += np.random.normal(0, 1, len(data))
     ax.scatter(data.x, data.y, s=data.score**2*6, c=data.score)
     map(lambda data: ax.text(*data, size=9, horizontalalignment='center',rotation=45),zip(data.x, data.y, data.label))
     ax.set_xticklabels(labels)
