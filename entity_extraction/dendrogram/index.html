@@ -2,10 +2,6 @@
 <meta charset="utf-8">
 <style>
 
-.node text {
-  font: 15px sans-serif;
-}
-
 .node--internal circle {
   fill: #555;
 }
@@ -19,12 +15,42 @@
   stroke-opacity: 0.4;
 }
 
+.d3-tip {
+  line-height: 1.3;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 4px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
 </style>
 <svg width="1000" height="1000"></svg>
 <script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
 <script>
 
-const MAX_RAD = 15; // DYNmic BASED ON NUMBER OF LEAVES
+const GRAPH_SIZE = 400;
 const COLORS = [
     '#69c242', '#64bbe3', '#ffcc00', '#ff7300', '#cf2030',
     '#598234', '#68829e', '#004445', '#375e97', '#4cb5f5',
@@ -45,20 +71,27 @@ var svg = d3.select("svg"),
     height = +svg.attr("height"),
     g = svg.append("g").attr("transform", "translate(" + (width / 2 - 15) + "," + (height / 2 + 25) + ")");
 
+
+
 var stratify = d3.stratify()
     .parentId(function(d) { return d.id.substring(0, d.id.lastIndexOf(".")); });
 
 var tree = d3.cluster()
-    .size([360, 390])
+    .size([360, GRAPH_SIZE])
     .separation(function(a, b) { return (a.parent == b.parent ? 1 : 2) / a.depth; });
 
 d3.csv("bbc_news_processed.csv", function(error, data) {
   if (error) throw error;
 
   let entityCounts = {};
+
+  //data = data.filter(x => +x.value !== 1);
+  const MAX_RAD = 2 * Math.PI * GRAPH_SIZE / data.length;
+
   data.forEach(function (x) {
       entityname = x.id.split('.')[1];
-      entityCounts[entityname] = entityCounts[entityname] | 0 + x.value;
+      if (!entityCounts[entityname]) entityCounts[entityname] = 0;
+      entityCounts[entityname] += +x.value;
   });
 
   const MAXVAL = data.reduce((a, x) => { return Math.max(a, x.value)}, 0);
@@ -66,6 +99,23 @@ d3.csv("bbc_news_processed.csv", function(error, data) {
     (a, x) => Math.max(a, entityCounts[x]),
     0
   );
+
+var tip = d3.tip()
+  .attr('class', 'd3-tip')
+  .offset([-10, 0])
+  .html(function(d) {
+      const splitted = d.data.id.split('.');
+      const entity = splitted[1];
+      let name = splitted[2];
+      let value = d.data.value;
+      if (!value) {
+        value = entityCounts[entity];
+      }
+      name = name || '';
+      return `<strong></strong>${entity}<br/> <span style='color:skyblue'>${name} </span> <span style='color:orange'>${value} </span>`;
+  });
+
+svg.call(tip);
 
   var root = tree(stratify(data)
       .sort(function(a, b) { return (a.height - b.height) || a.id.localeCompare(b.id); })); 
@@ -76,6 +126,9 @@ d3.csv("bbc_news_processed.csv", function(error, data) {
       .attr("class", "link")
       .attr("stroke-width", "4")
       .attr("stroke", function(d) {
+          if(d.children && d.children.length == 0) {
+              return "black";
+          }
         const entityname = d.data.id.split('.')[1];
         return color(entityname);
       })
@@ -92,6 +145,10 @@ d3.csv("bbc_news_processed.csv", function(error, data) {
       .attr("class", function(d) { return "node" + (d.children ? " node--internal" : " node--leaf"); })
       .attr("transform", function(d) { return "translate(" + project(d.x, d.y) + ")"; });
 
+  node
+    .on('mouseover', tip.show)
+    .on('mouseout', tip.hide);
+
   node.append("circle")
   .style("fill", function(d) {
       const entity = d.data.id.split('.')[1];
@@ -101,12 +158,16 @@ d3.csv("bbc_news_processed.csv", function(error, data) {
         function(d) {
             if (d.data && d.data.value) return (MAX_RAD * d.data.value / MAXVAL);
             const entityname = d.data.id.split('.')[1];
-            return entityCounts[entityname] * MAX_RAD * 2 / MAXSUMVAL;
+            return entityCounts[entityname] * MAX_RAD * 5 / MAXSUMVAL;
     });
 
   node.append("text")
       .attr("dy", ".31em")
       .attr("x", function(d) { return d.x < 180 === !d.children ? 6 : -6; })
+      .style("font", function(d) {
+        let size = d.data.value ? 10 : 18;
+        return `${size}px sans-serif`;
+      })
       .style("text-anchor", function(d) { return d.x < 180 === !d.children ? "start" : "end"; })
       .attr("transform", function(d) { return "rotate(" + (d.x < 180 ? d.x - 90 : d.x + 90) + ")"; })
       .text(function(d) { return d.id.substring(d.id.lastIndexOf(".") + 1); });

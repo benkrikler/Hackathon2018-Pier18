@@ -18,16 +18,16 @@ def test_strings(contents):
 
 def test_file(filename):
     with io.open(filename, 'r') as infile:
-        contents = unicode(infile.read()) #.replace("\n", "")
+        contents = infile.read() #.replace("\n", "")
         return test_strings(contents)
 
 def clean_string(string):
-    return _whitespace_re.sub(" ", string.encode('utf-8')).strip()
+    return _whitespace_re.sub(" ", string).strip()
 
 def cleanup_output(output):
     output = [(out.text, out.label_) for out in output.ents]
 
-    new_output = [(clean_string(w), e.encode('utf-8')) for w, e in output if w != '\n']
+    new_output = [(clean_string(w), e) for w, e in output if w != '\n']
     entities = {}
     for word, entity in new_output:
         if _bad_word_re.match(word):
