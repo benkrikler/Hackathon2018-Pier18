@@ -1,0 +1,217 @@
+id,value
+entity,
+entity.PERSON,
+entity.PERSON.Bathlodge,3
+entity.PERSON.Luis,2
+entity.PERSON.Georges,2
+entity.PERSON.Lenny,2
+entity.PERSON.Quarry,2
+entity.PERSON.Bush,2
+entity.PERSON.Trim,2
+entity.PERSON.USAID,1
+entity.PERSON.Greencastle,1
+entity.PERSON.Humphrey Blinker,1
+entity.PERSON.Main,1
+entity.PERSON.Discarded,1
+entity.PERSON.Incomplete,1
+entity.PERSON.BRC,1
+entity.PERSON.Cleared,1
+entity.PERSON.Bendals,1
+entity.PERSON.Participants,1
+entity.PERSON.Hamilton,1
+entity.PERSON.1974,1
+entity.PERSON.Eldra Bachelor,1
+entity.PERSON.Montserrat Soufriere,1
+entity.PERSON.Hurricane,1
+entity.PERSON.Hurricane Omar,1
+entity.PERSON.Coping Strategies,1
+entity.PERSON.Aunty Baby,1
+entity.PERSON.Patrick Colbourne,1
+entity.PERSON.Bendals Ghaut,1
+entity.PERSON.Resources Barber,1
+entity.PERSON.Vanscito Thomas,1
+entity.PERSON.Suzie,1
+entity.PERSON.Engineer,1
+entity.PERSON.Jason Peters,1
+entity.PERSON.Welder Alexis Joseph,1
+entity.PERSON.Violet Martin,1
+entity.PERSON.Derek,1
+entity.PERSON.Sports 4,1
+entity.PERSON.Pathfinders 0,1
+entity.PERSON.Importance,1
+entity.PERSON.Jan,1
+entity.PERSON.Jun,1
+entity.PERSON.Dry Season,1
+entity.PERSON.Problem Statements,1
+entity.PERSON.Exposed BRC Influence Repair,1
+entity.PERSON.CAN Clean,1
+entity.PERSON.Omar,1
+entity.PERSON.Earl,1
+entity.PERSON.Need,1
+entity.PERSON.Remove,1
+entity.PERSON.Enlarge,1
+entity.PERSON.Repair,1
+entity.PERSON.Back,1
+entity.PERSON.Trees,1
+entity.PERSON.Labour,1
+entity.PERSON.Volunteers,1
+entity.PERSON.Improve Shelter,1
+entity.CARDINAL,
+entity.CARDINAL.one,7
+entity.CARDINAL.two,4
+entity.CARDINAL.3,2
+entity.CARDINAL.1,2
+entity.CARDINAL.4,2
+entity.CARDINAL.2,2
+entity.CARDINAL.approximately 1400,1
+entity.CARDINAL.some 100,1
+entity.CARDINAL.about 18,1
+entity.CARDINAL.462,1
+entity.CARDINAL.2001)508,1
+entity.CARDINAL.684,1
+entity.CARDINAL.741,1
+entity.CARDINAL.4’-6’,1
+entity.CARDINAL.40,1
+entity.CARDINAL.12,1
+entity.CARDINAL.about 6,1
+entity.CARDINAL.89,1
+entity.CARDINAL.95,1
+entity.CARDINAL.10,1
+entity.CARDINAL.5,1
+entity.CARDINAL.6,1
+entity.CARDINAL.7,1
+entity.DATE,
+entity.DATE.2001,2
+entity.DATE.1995,2
+entity.DATE.1998,2
+entity.DATE.1999,2
+entity.DATE.2010,2
+entity.DATE.the year,2
+entity.DATE.the year 1937,1
+entity.DATE.this day,1
+entity.DATE.the first day,1
+entity.DATE.the remaining days,1
+entity.DATE.March 14th to 18th 2010,1
+entity.DATE.1425,1
+entity.DATE.this later,1
+entity.DATE.1900,1
+entity.DATE.1939,1
+entity.DATE.1950,1
+entity.DATE.1969-1970,1
+entity.DATE.1970,1
+entity.DATE.2003,1
+entity.DATE.2008,1
+entity.DATE.2009,1
+entity.DATE.years,1
+entity.DATE.mid year May June,1
+entity.DATE.one 3,1
+entity.DATE.hours,1
+entity.DATE.Aug 2011,1
+entity.DATE.sleeping quarters,1
+entity.ORG,
+entity.ORG.RC,3
+entity.ORG.VCA,2
+entity.ORG.School,2
+entity.ORG.Clinic,2
+entity.ORG.APUA,2
+entity.ORG.Eastern,1
+entity.ORG.Bendals,1
+entity.ORG.Browne’s Avenue Area,1
+entity.ORG.USAID,1
+entity.ORG.OFDA,1
+entity.ORG.the National Office of Disaster,1
+entity.ORG.Bendals VCA,1
+entity.ORG.the Vulnerability Capacity Assessment,1
+entity.ORG.First Aid,1
+entity.ORG.the Bendals School,1
+entity.ORG.Community,1
+entity.ORG.Statistics Division,1
+entity.ORG.Agriculture,1
+entity.ORG.Start,1
+entity.ORG.Bridge,1
+entity.ORG.Relocation,1
+entity.ORG.1980 Blasting,1
+entity.ORG.Ash,1
+entity.ORG.Heavy,1
+entity.ORG.Quarry Hill Picketting Public Works,1
+entity.ORG.Livelihoods,1
+entity.ORG.Adventist Church,1
+entity.ORG.School Bendals primary School Food &,1
+entity.ORG.Shops,1
+entity.ORG.Bakery & Shop,1
+entity.ORG.Butcher Stall Lawrance,1
+entity.ORG.Farmers Health &,1
+entity.ORG.Clinic Well Eastern,1
+entity.ORG.Farmers,1
+entity.ORG.Researchers / Historian,1
+entity.ORG.Linley Winter Institutional Analysis,1
+entity.ORG.Functional,1
+entity.ORG.Women’s Group,1
+entity.ORG.Youth,1
+entity.ORG.the Community Group,1
+entity.ORG.Wet/Rainy Season,1
+entity.ORG.Carnival,1
+entity.ORG.CIA,1
+entity.ORG.Weak,1
+entity.ORG.Influence Retrofit/Rebuild,1
+entity.ORG.More,1
+entity.ORG.Influence municipal Corporation Remove,1
+entity.ORG.Influence/Accept Clear,1
+entity.ORG.ABRC DM Team,1
+entity.ORG.DG Budget,1
+entity.ORG.Resources,1
+entity.ORG.Chainsaws,1
+entity.ORG.Ministry of Public Works,1
+entity.ORG.Consult Masonry Products,1
+entity.ORG.Bargain Center Budget,1
+entity.ORG.Timeline,1
+entity.ORG.Build a Community Center,1
+entity.NORP,
+entity.NORP.Bendals,4
+entity.NORP.Southern,1
+entity.QUANTITY,
+entity.QUANTITY.approximately 3500 acres,1
+entity.QUANTITY.7’-10’,1
+entity.QUANTITY.1 mile,1
+entity.QUANTITY.4 miles,1
+entity.PERCENT,
+entity.PERCENT.more than 90%,1
+entity.FAC,
+entity.FAC.the All Saints Road,1
+entity.FAC.Bridge,1
+entity.FAC.Green Castle,1
+entity.GPE,
+entity.GPE.Golden Grove,1
+entity.GPE.Blocked,1
+entity.GPE.Bendals,1
+entity.GPE.Tree,1
+entity.GPE.Discuss,1
+entity.LOC,
+entity.LOC.Cashew Hill,1
+entity.LOC.Roads,1
+entity.PRODUCT,
+entity.PRODUCT.Bendals,4
+entity.PRODUCT.Bendals Location of Community,1
+entity.PRODUCT.1974,1
+entity.PRODUCT.Hurricane Luis,1
+entity.PRODUCT.Green Castle Farms,1
+entity.PRODUCT.Build,1
+entity.PRODUCT.Accept,1
+entity.PRODUCT.Clean,1
+entity.PRODUCT.Bendals Quarry,1
+entity.ORDINAL,
+entity.ORDINAL.first,2
+entity.WORK_OF_ART,
+entity.WORK_OF_ART.Dust,2
+entity.WORK_OF_ART.Water tanks,1
+entity.WORK_OF_ART.Abandoned,1
+entity.WORK_OF_ART.Plant trees,1
+entity.WORK_OF_ART.Timeline:,1
+entity.EVENT,
+entity.EVENT.Hurricane Earl,1
+entity.EVENT.Bath Lodge,1
+entity.EVENT.Hugo,1
+entity.TIME,
+entity.TIME.regular hours,1
+entity.MONEY,
+entity.MONEY.280,1

@@ -50,7 +50,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
 <script>
 
-const GRAPH_SIZE = 400;
+const GRAPH_SIZE = 350;
 const COLORS = [
     '#69c242', '#64bbe3', '#ffcc00', '#ff7300', '#cf2030',
     '#598234', '#68829e', '#004445', '#375e97', '#4cb5f5',
@@ -80,7 +80,7 @@ var tree = d3.cluster()
     .size([360, GRAPH_SIZE])
     .separation(function(a, b) { return (a.parent == b.parent ? 1 : 2) / a.depth; });
 
-d3.csv("bbc_news_processed.csv", function(error, data) {
+d3.csv("ifrc.csv", function(error, data) {
   if (error) throw error;
 
   let entityCounts = {};
@@ -91,7 +91,7 @@ d3.csv("bbc_news_processed.csv", function(error, data) {
   data.forEach(function (x) {
       entityname = x.id.split('.')[1];
       if (!entityCounts[entityname]) entityCounts[entityname] = 0;
-      entityCounts[entityname] += +x.value;
+      entityCounts[entityname] += 1; //+x.value;
   });
 
   const MAXVAL = data.reduce((a, x) => { return Math.max(a, x.value)}, 0);
